@@ -51,8 +51,10 @@ const Movies = () => {
                 <p>{item.opening_crawl.split('\n').slice(0, 10).join('\n')}...</p>
 
                 <hr/>
-                <a href='#more'>More Info</a>
-
+                <a href='MoreInfo'>More Info</a>
+                <Outlet/>
+                {/* <Link to='/moreinfo'>More Info</Link> */}
+                  {/* <MoreInfo/> */}
               </li>
             )
           })}
