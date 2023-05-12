@@ -1,6 +1,8 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import Loader  from'../Images/loader.svg';
+import {Link} from 'react-router-dom';
+// import {Route} from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -41,9 +43,10 @@ const Movies = () => {
           {`Oops...............There is a problem fetching your data-${error}`}
           </div>}
         <ul className='movie-details'>
-          {data && data.results.map((item) => {
+          {data && data.results.map((item, ind) => {
+            console.log('ïtem ID', item )
             return (
-              <li key={item.episode_id}>
+              <li className='li' key={item.episode_id}>
                 <h2>{item.title}</h2>
                 <p className='date'>{new
                 Date(item.release_date).toLocaleDateString('en-US',{month:'long',day:'numeric', year:'numeric'})}</p>
@@ -51,10 +54,11 @@ const Movies = () => {
                 <p>{item.opening_crawl.split('\n').slice(0, 10).join('\n')}...</p>
 
                 <hr/>
-                <a href='MoreInfo'>More Info</a>
-                <Outlet/>
-                {/* <Link to='/moreinfo'>More Info</Link> */}
-                  {/* <MoreInfo/> */}
+                {/* <a href='MoreInfo/item.id'>More Info</a> */}
+                
+                <Link to={`/MoreInfo/${ind + 1}`}>More Info</Link>
+                 
+
               </li>
             )
           })}

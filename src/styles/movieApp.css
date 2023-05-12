@@ -1,6 +1,11 @@
+body{
+    background-color: black;
+    height: 250vh;
+}
+
 .movieApp{
     background-color: black;
-     height: 130vh;
+     height: fit-content;
 }
 
 .box{
@@ -60,7 +65,7 @@
 
 
 
-li{
+.li{
     
     /* background-color: rgba(73,66,66,0.5); */
     border-radius: 5px;
@@ -72,55 +77,145 @@ li{
     
 }
 
-li:nth-child(1){
+.li:nth-child(1){
     background-image: url(../Images/bg-card-1.0c96fd00.png);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
-li:nth-child(2){
+.li:nth-child(2){
     background-image: url(../Images/bg-card-2.b0a7b209.png);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
-li:nth-child(3){
+.li:nth-child(3){
     background-image: url(../Images/bg-card-3.1914d853.png);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
-li:nth-child(4){
+.li:nth-child(4){
     background-image: url(../Images/bg-card-4.c21c4d4b.png);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
-li:nth-child(5){
+.li:nth-child(5){
     background-image: url(../Images/bg-card-5.67d061d6.png);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
-li:nth-child(6){
+.li:nth-child(6){
     background-image: url(../Images/bg-card-6.b4fea25d.png);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
 
-li:hover{
+.li:hover{
     box-shadow:rgb(32, 152, 209) 0px 0px 10px 3px, rgb(0, 0, 0) 0px 0px 10px 0px;
 }
-li .date{
+.li .date{
 color: rgb(145, 140, 140);
 padding-top: 0;
 }
 
-li a{
+.li a{
     color:yellow;
     text-decoration: none;
 }
-li hr{
+.li hr{
     border-color: rgb(189, 36, 36);
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container .img-load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  auto 150%;
+    margin-top: 13%;
+    
+}
+
+
+.card{
+    width: 80%;
+    background-color: rgb(46, 45, 45);
+    border-radius: 5px;
+    
+}
+
+ button{
+    margin: 10px;
+    border: none;
+    background-color: rgb(46, 45, 45);
+    color: #d1cccc;
+    font-size: 16px;
+}
+
+.movie-info{
+     list-style: none;
+    width: 80%;
+    padding: 5px;
+            margin: auto;
+
+   
+   
+}
+
+
+.list{
+   border-radius: 5px;
+    padding: 10px;
+    text-align: justify;
+    color: #ffffff;
+
+}
+
+.list h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+
+}
+
+.list p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.list h4{
+    color: rgb(155, 153, 153);
+    font-size: 22px;
+    
+    
+}
+
+.list .para{
+    text-align: justify;
+    width: 100%;
+}
+
+.list hr{
+    border-color: rgb(146, 142, 142);
+}
+
+.details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: disc;
+    
 }
